@@ -54,3 +54,14 @@ security:
     resource:
       loadBalanced: true
       token-info-uri: http://localhost:8080/oauth/check_token
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      # 包含所有端点的信息，默认只打开info、health的端点
+  endpoint:
+    health:
+      # 总是显示详细的信息
+      show-details: always
